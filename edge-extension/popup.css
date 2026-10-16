@@ -1,0 +1,20 @@
+:root { color-scheme: light dark; font-family: "Segoe UI", sans-serif; }
+body { width: 310px; margin: 0; background: #f6f8fa; color: #17202a; }
+main { padding: 16px; }
+h1 { margin: 0 0 14px; font-size: 19px; }
+label { display: block; margin: 10px 0; font-size: 13px; font-weight: 600; }
+input[type="password"], input[type="number"] { box-sizing: border-box; width: 100%; margin-top: 5px; padding: 8px; border: 1px solid #b8c2cc; border-radius: 7px; background: white; color: #17202a; }
+.check { display: flex; gap: 7px; align-items: center; font-weight: 500; }
+.buttons { display: flex; gap: 8px; margin-top: 14px; }
+button { flex: 1; border: 0; border-radius: 999px; padding: 9px 10px; background: #0f8af0; color: white; cursor: pointer; font-weight: 700; }
+button.secondary { background: #536471; }
+button:disabled { opacity: .55; cursor: default; }
+#status { margin: 14px 0 4px; font-weight: 700; }
+#error { min-height: 18px; margin: 4px 0; color: #c62828; word-break: break-word; }
+.hint { color: #536471; font-size: 12px; line-height: 1.45; }
+@media (prefers-color-scheme: dark) {
+  body { background: #15202b; color: #eef3f4; }
+  input[type="password"], input[type="number"] { background: #22303c; border-color: #536471; color: #eef3f4; }
+  .hint { color: #8b98a5; }
+}
+

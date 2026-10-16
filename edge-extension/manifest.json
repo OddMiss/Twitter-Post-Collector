@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "X 帖子采集与摘要",
+  "version": "1.4.0",
+  "description": "从当前已登录的 X 标签页采集可见帖子并发送给本机 Python 服务。",
+  "permissions": ["storage", "activeTab", "tabs", "alarms", "scripting"],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "X 帖子采集",
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>X 帖子采集</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>X 帖子采集</h1>
+      <label>连接令牌<input id="token" type="password" autocomplete="off" placeholder="Python 服务显示的令牌"></label>
+      <label>滚动间隔（毫秒）<input id="delay" type="number" min="1000" max="10000" value="2200"></label>
+      <label class="check"><input id="autoScroll" type="checkbox" checked> 自动向下滚动</label>
+      <div class="buttons">
+        <button id="start">开始采集</button>
+        <button id="stop" class="secondary">停止并总结</button>
+      </div>
+      <p id="status">等待启动</p>
+      <p id="error" role="alert"></p>
+      <p class="hint">请先启动 Python 服务，并在已登录的 x.com 页面使用。采集没有数量上限，完成后请点击“停止并总结”。</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
+
